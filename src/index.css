@@ -8,15 +8,19 @@
   }
 }
 
-/* Mystical Ethereal Shrine Background Light Pattern */
+/* Mystical Ethereal Shrine Background Pattern & Divine Lights */
 .shrine-pattern-light {
   background-color: #FAF6ED;
   background-image: 
-    radial-gradient(circle at 50% -10%, rgba(255, 245, 205, 0.95) 0%, rgba(255, 235, 215, 0.4) 40%, rgba(250, 246, 237, 0) 75%),
-    radial-gradient(circle at 10% 30%, rgba(252, 228, 236, 0.5) 0%, rgba(250, 246, 237, 0) 45%),
-    radial-gradient(circle at 90% 70%, rgba(225, 245, 238, 0.5) 0%, rgba(250, 246, 237, 0) 45%),
-    radial-gradient(#D8CFA7 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 28px 28px;
+    /* Soft golden sunbeams from top */
+    radial-gradient(circle at 50% -20%, rgba(255, 248, 220, 0.98) 0%, rgba(255, 235, 180, 0.45) 45%, rgba(250, 246, 237, 0) 80%),
+    /* Ethereal divine aura spots */
+    radial-gradient(circle at 15% 25%, rgba(252, 228, 236, 0.6) 0%, rgba(250, 246, 237, 0) 50%),
+    radial-gradient(circle at 85% 65%, rgba(225, 245, 238, 0.6) 0%, rgba(250, 246, 237, 0) 50%),
+    radial-gradient(circle at 50% 85%, rgba(243, 229, 245, 0.5) 0%, rgba(250, 246, 237, 0) 50%),
+    /* Subtle sacred gold Seigaiha / Dot lattice overlay */
+    radial-gradient(#C5A028 1.2px, transparent 1.2px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 32px 32px;
 }
 
 /* Gold border gradient */
@@ -27,19 +31,19 @@
 
 .gold-box {
   box-shadow: 
-    0 15px 35px rgba(212, 175, 55, 0.18),
-    0 0 25px rgba(255, 240, 180, 0.5),
+    0 15px 35px rgba(212, 175, 55, 0.22),
+    0 0 30px rgba(255, 240, 180, 0.6),
     inset 0 0 20px rgba(255, 255, 255, 0.9);
 }
 
 /* Mystical Glow Cards */
 .mystic-card {
-  background: rgba(255, 253, 249, 0.92);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: rgba(255, 253, 249, 0.93);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.45);
   box-shadow: 
-    0 10px 30px rgba(184, 134, 11, 0.08),
-    0 0 15px rgba(255, 235, 170, 0.3);
+    0 12px 32px rgba(184, 134, 11, 0.1),
+    0 0 20px rgba(255, 235, 170, 0.4);
 }
 
 /* Text glow effect for mystical theme */
@@ -98,20 +102,38 @@
 }
 
 @keyframes divine-aura {
-  0%, 100% { opacity: 0.5; transform: scale(1) rotate(0deg); }
-  50% { opacity: 0.95; transform: scale(1.12) rotate(3deg); }
+  0%, 100% { opacity: 0.55; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.95; transform: scale(1.15) rotate(4deg); }
 }
 
 .animate-divine-aura {
-  animation: divine-aura 6s ease-in-out infinite;
+  animation: divine-aura 7s ease-in-out infinite;
 }
 
+/* Gentle floating petals and sacred sparks */
 @keyframes particle-float {
-  0% { transform: translateY(0px) scale(0.8); opacity: 0.2; }
-  50% { transform: translateY(-20px) scale(1.1); opacity: 0.8; }
-  100% { transform: translateY(-40px) scale(0.8); opacity: 0; }
+  0% { transform: translateY(100vh) rotate(0deg) scale(0.6); opacity: 0; }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.8; }
+  100% { transform: translateY(-100px) rotate(360deg) scale(1.1); opacity: 0; }
 }
 
-.animate-particle {
-  animation: particle-float 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+.animate-particle-1 {
+  animation: particle-float 12s linear infinite;
+}
+.animate-particle-2 {
+  animation: particle-float 16s linear infinite;
+}
+.animate-particle-3 {
+  animation: particle-float 20s linear infinite;
+}
+
+/* Rays of Light Shimmer */
+@keyframes ray-shimmer {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 0.6; transform: scaleY(1.08); }
+}
+
+.animate-ray {
+  animation: ray-shimmer 8s ease-in-out infinite;
 }
