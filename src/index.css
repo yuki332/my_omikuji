@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Shippori Mincho', 'Noto Serif JP', 'Zen Old Mincho', serif;
+    background-color: #FAF6ED;
+    color: #2D2A26;
+  }
+}
+
+/* Mystical Ethereal Shrine Background Light Pattern */
+.shrine-pattern-light {
+  background-color: #FAF6ED;
+  background-image: 
+    radial-gradient(circle at 50% -10%, rgba(255, 245, 205, 0.95) 0%, rgba(255, 235, 215, 0.4) 40%, rgba(250, 246, 237, 0) 75%),
+    radial-gradient(circle at 10% 30%, rgba(252, 228, 236, 0.5) 0%, rgba(250, 246, 237, 0) 45%),
+    radial-gradient(circle at 90% 70%, rgba(225, 245, 238, 0.5) 0%, rgba(250, 246, 237, 0) 45%),
+    radial-gradient(#D8CFA7 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 28px 28px;
+}
+
+/* Gold border gradient */
+.gold-border {
+  border: 1px solid #C5A028;
+  border-image: linear-gradient(to bottom, #E2C258, #B8860B, #E2C258) 1;
+}
+
+.gold-box {
+  box-shadow: 
+    0 15px 35px rgba(212, 175, 55, 0.18),
+    0 0 25px rgba(255, 240, 180, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+/* Mystical Glow Cards */
+.mystic-card {
+  background: rgba(255, 253, 249, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 
+    0 10px 30px rgba(184, 134, 11, 0.08),
+    0 0 15px rgba(255, 235, 170, 0.3);
+}
+
+/* Text glow effect for mystical theme */
+.text-glow {
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.6), 0 0 2px rgba(184, 134, 11, 0.8);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 12px rgba(168, 28, 28, 0.4);
+}
+
+/* Vertical Japanese text mode */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8BFA8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8860B;
+}
+
+@keyframes shake-cylinder {
+  0% { transform: rotate(0deg) translateY(0); }
+  15% { transform: rotate(-8deg) translateY(-8px); }
+  30% { transform: rotate(10deg) translateY(6px); }
+  45% { transform: rotate(-10deg) translateY(-6px); }
+  60% { transform: rotate(8deg) translateY(4px); }
+  75% { transform: rotate(-5deg) translateY(-2px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+.animate-shake {
+  animation: shake-cylinder 0.6s ease-in-out infinite;
+}
+
+@keyframes float-stick {
+  0% { transform: translateY(100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(0%); opacity: 1; }
+}
+
+.animate-stick-out {
+  animation: float-stick 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes divine-aura {
+  0%, 100% { opacity: 0.5; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.95; transform: scale(1.12) rotate(3deg); }
+}
+
+.animate-divine-aura {
+  animation: divine-aura 6s ease-in-out infinite;
+}
+
+@keyframes particle-float {
+  0% { transform: translateY(0px) scale(0.8); opacity: 0.2; }
+  50% { transform: translateY(-20px) scale(1.1); opacity: 0.8; }
+  100% { transform: translateY(-40px) scale(0.8); opacity: 0; }
+}
+
+.animate-particle {
+  animation: particle-float 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "おみくじ",
+  "description": "日本の伝統的な神社おみくじアプリ。筒を振って運勢を占い、AI神主からの詳細な助言や運勢の結び処を体験できます。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
